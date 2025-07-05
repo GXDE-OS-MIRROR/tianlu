@@ -2,6 +2,7 @@ name: Sync
 run-name: Sync ${{ GITHUB.REPOSITORY }}
 
 on:
+  workflow_dispatch:
   workflow_call:
     secrets:
       SYNCPASSWORD:
@@ -21,5 +22,5 @@ jobs:
     secrets: inherit
     with:
       codeName: bixie
-      repoUrl: https://github.com/GXDE-OS-MIRROR/bixie
+      repoUrl: GXDE-OS-MIRROR/bixie
 
