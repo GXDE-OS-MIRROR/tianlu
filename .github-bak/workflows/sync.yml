@@ -1,0 +1,25 @@
+name: Sync
+run-name: Sync ${{ GITHUB.REPOSITORY }}
+
+on:
+  workflow_call:
+    secrets:
+      SYNCPASSWORD:
+        required: true
+      SYNCURL:
+        required: true
+      GITPASSWD:
+        required: true
+      GITUSER:
+        required: true
+
+
+
+jobs:  
+  call-sync:
+    uses: GXDE-OS-MIRROR/action/.github/workflows/sync.yml@main
+    secrets: inherit
+    with:
+      codeName: bixie
+      repoUrl: https://github.com/GXDE-OS-MIRROR/bixie
+
