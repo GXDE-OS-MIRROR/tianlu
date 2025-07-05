@@ -22,5 +22,5 @@ jobs:
     secrets: inherit
     with:
       codeName: bixie
-      repoUrl: GXDE-OS-MIRROR/bixie
+      repoUrl: GXDE-OS-MIRROR/tianlu
 
